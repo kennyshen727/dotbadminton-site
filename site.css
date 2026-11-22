@@ -520,6 +520,52 @@ main:focus {
   }
 }
 
+/* ---------- 下載用 QR Code ---------- */
+/* 手機沒辦法掃自己的螢幕，所以只在有滑鼠的大螢幕顯示 */
+.qr-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.qr-block p {
+  max-width: 128px;
+  font-size: 12px;
+  line-height: var(--lh-xs);
+  color: var(--text-3);
+}
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.cta-actions .qr-block {
+  align-items: center;
+  text-align: center;
+}
+.qr {
+  display: grid;
+  place-items: center;
+  width: 128px;
+  height: 128px;
+  flex: none;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+.qr img {
+  width: 112px;
+  height: 112px;
+  border-radius: 4px;
+}
+@media (hover: none), (max-width: 767px) {
+  .qr-block {
+    display: none;
+  }
+}
+
 /* ---------- 截圖外框 ---------- */
 .hero-visual {
   position: relative;
