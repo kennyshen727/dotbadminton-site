@@ -3,81 +3,126 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#021724">
+  <meta name="theme-color" content="#000000">
   <meta name="description" content="羽球計分板 DotBadminton 的隱私權政策：資料存在哪裡、裝置之間怎麼同步、用到哪些第三方服務。">
   <title>羽球計分板 DotBadminton 隱私權政策</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="site.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-<header class="hero">
-  <div class="gutter hero-inner">
-    <img src="images/icon.png" alt="DotBadminton App 圖示" width="64" height="64">
-    <div>
-      <h1>羽球計分板 DotBadminton 隱私權政策</h1>
-      <p>最後更新：2026 年 11 月 11 日</p>
+<svg class="icon-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M4 20h16"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></symbol>
+</svg>
+
+<a class="skip-link btn btn-primary btn-sm" href="#main">跳到主要內容</a>
+
+<nav class="site-nav" aria-label="主要導覽">
+  <a class="brand" href="index.html">
+    <img src="images/icon.png" alt="" width="32" height="32">
+    <span>DotBadminton</span>
+  </a>
+  <ul class="nav-links is-always">
+    <li><a href="index.html">首頁</a></li>
+    <li><a href="support.html">支援與常見問題</a></li>
+    <li><a href="privacy.html" aria-current="page">隱私權政策</a></li>
+  </ul>
+  <a class="btn btn-primary btn-sm" href="https://apps.apple.com/tw/app/id6772691692">免費下載</a>
+</nav>
+
+<main id="main" tabindex="-1">
+
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-hero-inner">
+        <p class="kicker"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>隱私權政策</p>
+        <h1 class="page-title">羽球計分板 DotBadminton 隱私權政策</h1>
+        <p class="page-meta">最後更新：2026 年 11 月 11 日</p>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="gutter prose">
+  <section class="section is-tight">
+    <div class="container">
+      <div class="prose reveal">
+        <p>本政策說明羽球計分板 DotBadminton（以下稱「本 App」）會處理哪些資料、為什麼處理，以及你可以怎麼控制。本 App 沒有帳號系統，也沒有自己的伺服器。</p>
 
-  <p style="margin-top:28px">本政策說明羽球計分板 DotBadminton（以下稱「本 App」）會處理哪些資料、為什麼處理，以及你可以怎麼控制。本 App 沒有帳號系統，也沒有自己的伺服器。</p>
+        <h2>1. 存在你裝置上的資料</h2>
+        <p>比賽紀錄、常用球員名稱、App 設定，以及廣告頻率與 Garmin 每日免費場次的計數，都只存在你的裝置上，不會上傳給我們。刪除 App 就會一併刪除。</p>
 
-  <h2>1. 存在你裝置上的資料</h2>
-  <p>比賽紀錄、常用球員名稱、App 設定，以及廣告頻率與 Garmin 每日免費場次的計數，都只存在你的裝置上，不會上傳給我們。刪除 App 就會一併刪除。</p>
+        <h2>2. 裝置之間的同步</h2>
+        <p>你連接計分板、Apple Watch 或 Garmin 手錶時，比分、球員名稱與設定只在你的裝置之間傳送（藍牙、區域網路，或 Apple 與 Garmin 提供的手錶連線），不經過我們的伺服器。</p>
 
-  <h2>2. 裝置之間的同步</h2>
-  <p>你連接計分板、Apple Watch 或 Garmin 手錶時，比分、球員名稱與設定只在你的裝置之間傳送（藍牙、區域網路，或 Apple 與 Garmin 提供的手錶連線），不經過我們的伺服器。</p>
+        <h2>3. 廣告（Google AdMob）</h2>
+        <p>免費版會在比賽結束後顯示廣告，Garmin 計分也可以用獎勵廣告解鎖。廣告由 Google AdMob 提供，AdMob 可能會收集：</p>
+        <ul>
+          <li>裝置的廣告識別碼（IDFA，只有你在 App Tracking Transparency 提示中允許時才會取得）</li>
+          <li>裝置型號、作業系統版本、IP 位址等裝置資訊</li>
+          <li>廣告的顯示與點擊紀錄</li>
+        </ul>
+        <p>這些資料用於顯示廣告、衡量廣告成效與防止詐騙。詳情請見 <a class="text-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>與 <a class="text-link" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 如何使用廣告資料</a>。</p>
 
-  <h2>3. 廣告（Google AdMob）</h2>
-  <p>免費版會在比賽結束後顯示廣告，Garmin 計分也可以用獎勵廣告解鎖。廣告由 Google AdMob 提供，AdMob 可能會收集：</p>
-  <ul>
-    <li>裝置的廣告識別碼（IDFA，只有你在 App Tracking Transparency 提示中允許時才會取得）</li>
-    <li>裝置型號、作業系統版本、IP 位址等裝置資訊</li>
-    <li>廣告的顯示與點擊紀錄</li>
-  </ul>
-  <p>這些資料用於顯示廣告、衡量廣告成效與防止詐騙。詳情請見 <a href="https://policies.google.com/privacy">Google 隱私權政策</a>與 <a href="https://policies.google.com/technologies/ads">Google 如何使用廣告資料</a>。</p>
+        <h2>4. App Tracking Transparency（追蹤授權）</h2>
+        <p>第一場比賽打完後，本 App 會透過 iOS 的 App Tracking Transparency 詢問是否允許追蹤。你拒絕的話，AdMob 只會顯示非個人化廣告，App 的所有功能照常可用。你可以隨時到 iPhone「設定 → 隱私權與安全性 → 追蹤」更改。</p>
 
-  <h2>4. App Tracking Transparency（追蹤授權）</h2>
-  <p>第一場比賽打完後，本 App 會透過 iOS 的 App Tracking Transparency 詢問是否允許追蹤。你拒絕的話，AdMob 只會顯示非個人化廣告，App 的所有功能照常可用。你可以隨時到 iPhone「設定 → 隱私權與安全性 → 追蹤」更改。</p>
+        <h2>5. 購買（RevenueCat 與 Apple）</h2>
+        <p>DotBadminton Plus 透過 Apple 的 App 內購買付款，我們拿不到你的付款資料。購買狀態由 RevenueCat 驗證與保存，RevenueCat 會處理：</p>
+        <ul>
+          <li>一組隨機產生的匿名使用者 ID（不含你的姓名或 Apple ID）</li>
+          <li>購買紀錄（購買的方案、時間、訂閱狀態）</li>
+          <li>裝置與 App 版本資訊</li>
+        </ul>
+        <p>詳情請見 <a class="text-link" href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat 隱私權政策</a>。</p>
 
-  <h2>5. 購買（RevenueCat 與 Apple）</h2>
-  <p>DotBadminton Plus 透過 Apple 的 App 內購買付款，我們拿不到你的付款資料。購買狀態由 RevenueCat 驗證與保存，RevenueCat 會處理：</p>
-  <ul>
-    <li>一組隨機產生的匿名使用者 ID（不含你的姓名或 Apple ID）</li>
-    <li>購買紀錄（購買的方案、時間、訂閱狀態）</li>
-    <li>裝置與 App 版本資訊</li>
-  </ul>
-  <p>詳情請見 <a href="https://www.revenuecat.com/privacy">RevenueCat 隱私權政策</a>。</p>
+        <h2>6. 第三方服務總覽</h2>
+        <div class="table-wrap">
+          <table>
+            <tr><th>服務</th><th>用途</th><th>資料</th></tr>
+            <tr><td>Google AdMob</td><td>免費版廣告</td><td>廣告識別碼（經你允許）、裝置資訊、廣告互動</td></tr>
+            <tr><td>RevenueCat</td><td>驗證 DotBadminton Plus 購買</td><td>匿名使用者 ID、購買紀錄、裝置資訊</td></tr>
+            <tr><td>Apple</td><td>付款、App Store、Apple Watch 連線</td><td>依 Apple 隱私權政策</td></tr>
+            <tr><td>Garmin Connect IQ</td><td>Garmin 手錶與 iPhone 之間的連線</td><td>比分與按鍵訊息，依 Garmin 隱私權政策</td></tr>
+          </table>
+        </div>
 
-  <h2>6. 第三方服務總覽</h2>
-  <div class="table-wrap">
-    <table>
-      <tr><th>服務</th><th>用途</th><th>資料</th></tr>
-      <tr><td>Google AdMob</td><td>免費版廣告</td><td>廣告識別碼（經你允許）、裝置資訊、廣告互動</td></tr>
-      <tr><td>RevenueCat</td><td>驗證 DotBadminton Plus 購買</td><td>匿名使用者 ID、購買紀錄、裝置資訊</td></tr>
-      <tr><td>Apple</td><td>付款、App Store、Apple Watch 連線</td><td>依 Apple 隱私權政策</td></tr>
-      <tr><td>Garmin Connect IQ</td><td>Garmin 手錶與 iPhone 之間的連線</td><td>比分與按鍵訊息，依 Garmin 隱私權政策</td></tr>
-    </table>
-  </div>
+        <h2>7. 兒童隱私</h2>
+        <p>本 App 不針對 13 歲以下兒童設計，也不會刻意收集兒童的個人資料。</p>
 
-  <h2>7. 兒童隱私</h2>
-  <p>本 App 不針對 13 歲以下兒童設計，也不會刻意收集兒童的個人資料。</p>
+        <h2>8. 政策更新</h2>
+        <p>本政策若有變動，會更新這個頁面上方的日期。重大變更會在 App 更新說明中告知。</p>
 
-  <h2>8. 政策更新</h2>
-  <p>本政策若有變動，會更新這個頁面上方的日期。重大變更會在 App 更新說明中告知。</p>
-
-  <h2>9. 聯絡方式</h2>
-  <p>對本政策有任何問題，請寄信到 <a href="mailto:dotbadminton.app@gmail.com">dotbadminton.app@gmail.com</a>。</p>
-
-  <footer>
-    <span>羽球計分板 DotBadminton</span>
-    <a href="index.html">首頁</a>
-    <a href="support.html">支援與常見問題</a>
-  </footer>
+        <h2>9. 聯絡方式</h2>
+        <p>對本政策有任何問題，請寄信到 <a class="text-link" href="mailto:dotbadminton.app@gmail.com">dotbadminton.app@gmail.com</a>。</p>
+      </div>
+    </div>
+  </section>
 
 </main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand">
+        <img src="images/icon.png" alt="" width="32" height="32">
+        <span>羽球計分板 DotBadminton</span>
+      </span>
+      <p>誰有空誰計分，比分一起更新。</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="support.html">支援與常見問題</a></li>
+      <li><a href="privacy.html" aria-current="page">隱私權政策</a></li>
+      <li><a href="mailto:dotbadminton.app@gmail.com">dotbadminton.app@gmail.com</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 羽球計分板 DotBadminton</p>
+  </div>
+</footer>
+
+<script src="site.js" defer></script>
 
 </body>
 </html>

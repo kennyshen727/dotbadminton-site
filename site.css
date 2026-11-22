@@ -1,12 +1,12 @@
 /* =====================================================================
-   羽球計分板 DotBadminton 首頁樣式
+   羽球計分板 DotBadminton 網站樣式
    設計規則：
    - 背景是平的、不用漸層（只有主標題的文字漸層例外）
    - 間距只用 0、4、8、12、16、24、32、40、48、64、96px
    - 圓角只用 8、12、16、24、32px；內層圓角 = 外層 − 間距
    - 框線四邊都有或都沒有
    - 動態只動 transform 與 opacity，曲線一律用 --ease
-   首頁單獨用這支樣式；privacy.html、support.html 仍用 style.css
+   首頁、支援與常見問題、隱私權政策三頁共用這支樣式
    ===================================================================== */
 
 /* ---------- 設計變數 ---------- */
@@ -187,6 +187,7 @@ main:focus {
 }
 .section-head {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
   max-width: 680px;
   margin-bottom: 48px;
@@ -347,6 +348,16 @@ main:focus {
   color: var(--text);
   background-color: var(--surface-3);
 }
+/* 內頁沒有手機選單，連結在放得下的時候就一直顯示 */
+@media (min-width: 640px) {
+  .nav-links.is-always {
+    display: flex;
+  }
+}
+.nav-links a[aria-current="page"] {
+  color: var(--text);
+  background-color: var(--surface-4);
+}
 .menu-toggle {
   position: relative;
   display: inline-grid;
@@ -442,11 +453,13 @@ main:focus {
 }
 .hero-grid {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 48px;
   align-items: center;
 }
 .hero-copy {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 24px;
 }
 .hero-title {
@@ -511,10 +524,12 @@ main:focus {
 .hero-visual {
   position: relative;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   place-items: center;
   padding-block: 16px;
 }
 .shot {
+  max-width: 100%;
   overflow: hidden;
   border-radius: 24px;
   background-color: #000000;
@@ -567,6 +582,7 @@ main:focus {
 .shot-stage {
   position: relative;
   width: fit-content;
+  max-width: 100%;
 }
 .shot-chip.is-a {
   top: 8%;
@@ -577,6 +593,12 @@ main:focus {
   right: 0;
   bottom: 12%;
   translate: 40% 0;
+}
+@media (max-width: 639px) {
+  .shot-chip.is-a,
+  .shot-chip.is-b {
+    translate: none;
+  }
 }
 @media (min-width: 640px) {
   .shot.is-phone {
@@ -597,6 +619,7 @@ main:focus {
 /* ---------- 影片 ---------- */
 .promo-figure {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
   max-width: 880px;
   margin-inline: auto;
@@ -635,15 +658,18 @@ main:focus {
 /* ---------- 功能段落：圖文兩欄，左右交錯 ---------- */
 .benefits {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 64px;
 }
 .benefit {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 32px;
   align-items: center;
 }
 .benefit-copy {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
   align-content: start;
   max-width: 560px;
@@ -658,6 +684,7 @@ main:focus {
 .benefit-visual {
   position: relative;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   place-items: center;
   padding-block: 24px;
 }
@@ -683,10 +710,12 @@ main:focus {
 /* ---------- 功能小卡 ---------- */
 .features {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
 }
 .feature {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   align-content: start;
   gap: 12px;
   padding: 24px;
@@ -761,6 +790,7 @@ main:focus {
 /* ---------- 最後的下載區 ---------- */
 .cta-card {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   justify-items: center;
   gap: 24px;
   padding: 48px 24px;
@@ -786,6 +816,7 @@ main:focus {
 /* ---------- 其他頁面的入口 ---------- */
 .links {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 12px;
 }
 .links a {
@@ -820,10 +851,12 @@ main:focus {
 }
 .footer-inner {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 24px;
 }
 .footer-brand {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 8px;
 }
 .footer-brand .brand {
@@ -893,4 +926,363 @@ main:focus {
   .is-armed .tagline-word {
     opacity: 1;
   }
+}
+
+/* =====================================================================
+   內頁（支援與常見問題、隱私權政策）
+   ===================================================================== */
+
+/* ---------- 內頁頁首 ---------- */
+.page-hero {
+  padding-top: calc(96px + env(safe-area-inset-top, 0px));
+  padding-bottom: 48px;
+}
+.page-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  max-width: 760px;
+}
+.page-title {
+  font-size: 30px;
+  line-height: var(--lh-3xl);
+}
+.page-meta {
+  font-size: 14px;
+  line-height: var(--lh-sm);
+  color: var(--text-3);
+}
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 36px;
+    line-height: var(--lh-4xl);
+  }
+}
+@media (min-width: 1024px) {
+  .page-hero {
+    padding-top: calc(128px + env(safe-area-inset-top, 0px));
+    padding-bottom: 64px;
+  }
+}
+
+/* ---------- 聯絡卡 ---------- */
+.contact-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background-color: var(--surface-1);
+}
+.contact-card .contact-title {
+  font-size: 20px;
+  line-height: var(--lh-xl);
+  font-weight: 600;
+}
+.contact-card p {
+  color: var(--text-2);
+}
+.contact-card .hint {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: var(--lh-sm);
+  color: var(--text-3);
+}
+.contact-card .btn {
+  justify-self: start;
+  margin-top: 8px;
+}
+@media (min-width: 768px) {
+  .contact-card {
+    padding: 32px;
+  }
+}
+
+/* ---------- 支援頁上方的三張圖卡 ---------- */
+.highlights {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+.hl {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background-color: var(--surface-1);
+}
+/* 內層圓角 = 外層 24 − 間距 16 = 8 */
+.hl-shot {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  place-items: center;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--surface-3);
+}
+.hl-shot img {
+  width: auto;
+  max-height: 280px;
+  border-radius: 8px;
+}
+.hl-text {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 4px;
+  padding: 0 8px 8px;
+}
+.hl-text h3 {
+  font-size: 16px;
+  line-height: var(--lh-base);
+}
+.hl-text p {
+  font-size: 14px;
+  line-height: var(--lh-sm);
+  color: var(--text-2);
+}
+@media (min-width: 768px) {
+  .highlights {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ---------- 常見問題 ---------- */
+.faq-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+}
+.faq-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+}
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background-color: var(--surface-1);
+  transition: border-color 300ms var(--ease);
+}
+.faq-item[open] {
+  border-color: var(--line-strong);
+}
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  font-size: 16px;
+  line-height: var(--lh-base);
+  font-weight: 600;
+  list-style: none;
+  cursor: pointer;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary .icon {
+  color: var(--text-3);
+  transition: transform 500ms var(--ease);
+}
+.faq-item[open] summary .icon {
+  transform: rotate(45deg);
+}
+.faq-answer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  padding: 0 24px 24px;
+  color: var(--text-2);
+}
+.faq-answer strong {
+  color: var(--text);
+}
+.faq-answer ul {
+  display: grid;
+  gap: 8px;
+}
+/* 項目符號用絕對定位，li 裡的行內內容才會照常接在一起排 */
+.faq-answer li {
+  position: relative;
+  padding-left: 20px;
+}
+.faq-answer li::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: var(--accent);
+}
+@media (min-width: 1024px) {
+  .faq-layout {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    gap: 64px;
+    align-items: start;
+  }
+  .faq-layout .section-head {
+    position: sticky;
+    top: 96px;
+    margin-bottom: 0;
+  }
+}
+
+/* ---------- 答案裡的圖與提醒 ---------- */
+.fig {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: 12px;
+  margin-block: 4px;
+}
+.fig .shot {
+  max-width: 100%;
+}
+.fig figcaption {
+  font-size: 14px;
+  line-height: var(--lh-sm);
+  color: var(--text-3);
+  text-align: center;
+}
+.fig figcaption .zoom-hint {
+  color: var(--accent);
+}
+.note-card {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background-color: var(--surface-2);
+  font-size: 14px;
+  line-height: var(--lh-sm);
+  color: var(--text-2);
+}
+.note-card .icon {
+  margin-top: 2px;
+  color: var(--accent);
+}
+
+/* ---------- 方案價格 ---------- */
+.plans {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+  margin-block: 4px;
+}
+.plan {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background-color: var(--surface-2);
+  font-size: 14px;
+  line-height: var(--lh-sm);
+}
+.plan b {
+  color: var(--text);
+}
+.plan span {
+  color: var(--accent);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* ---------- 長文（隱私權政策） ---------- */
+.prose {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  max-width: 760px;
+}
+.prose h2 {
+  margin-top: 32px;
+  font-size: 20px;
+  line-height: var(--lh-xl);
+}
+.prose h2:first-child {
+  margin-top: 0;
+}
+.prose p {
+  color: var(--text-2);
+}
+.prose ul {
+  display: grid;
+  gap: 8px;
+  color: var(--text-2);
+}
+.prose li {
+  position: relative;
+  padding-left: 20px;
+}
+.prose li::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: var(--accent);
+}
+@media (min-width: 768px) {
+  .prose h2 {
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: var(--lh-2xl);
+  }
+}
+
+/* ---------- 表格 ---------- */
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background-color: var(--surface-1);
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface-4) transparent;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 520px;
+  font-size: 14px;
+  line-height: var(--lh-sm);
+}
+th,
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+tr:last-child th,
+tr:last-child td {
+  border-bottom: 0;
+}
+th {
+  background-color: var(--surface-3);
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+td {
+  color: var(--text-2);
+}
+.fig figcaption.withzoom::after {
+  content: "（點圖可放大）";
+  color: var(--accent);
 }
