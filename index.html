@@ -32,12 +32,12 @@
 
     .feature {
       display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 24px;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
       align-items: center;
-      margin-top: 44px;
+      margin-top: 52px;
     }
-    .feature.flip { grid-template-columns: 1fr 200px; }
+    .feature.flip { grid-template-columns: 1fr 280px; }
     .feature.flip .ftext { order: -1; }
     .feature .fshot {
       background: var(--shot-bg);
@@ -48,18 +48,13 @@
     }
     .feature .fshot img {
       display: block;
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      object-position: center;
+      width: auto;
+      max-width: 100%;
+      max-height: 520px;
+      margin: 0 auto;
       border-radius: 9px;
     }
-    /* 這張的重點是畫面下緣的發球紅點 */
-    .feature .fshot.serve img { object-position: 50% 88%; }
-    /* 計分板要帶到下緣的球員名字與發球紅點 */
-    .feature .fshot.board img { object-position: 50% 85%; }
-    /* 開賽設定的選項集中在畫面上半 */
-    .feature .fshot.top img { object-position: 50% 22%; }
+
     .feature h2 { font-size: 1.15rem; margin: 0 0 8px; }
     .feature p { margin: 0; color: var(--muted); font-size: 0.95rem; }
     .feature .ftext { min-width: 0; }
@@ -67,7 +62,7 @@
     @media (max-width: 560px) {
       .feature, .feature.flip { grid-template-columns: 1fr; gap: 16px; }
       .feature.flip .ftext { order: 0; }
-      .feature .fshot { max-width: 220px; }
+      .feature .fshot { max-width: 320px; margin: 0 auto; }
     }
 
     .links { display: grid; gap: 10px; margin-top: 44px; }
@@ -104,7 +99,7 @@
 <main class="gutter">
 
   <div class="feature">
-    <div class="fshot serve"><img src="images/scoring.jpg" alt="計分畫面，發球球員名字旁有紅點標示" loading="lazy"></div>
+    <div class="fshot"><a class="zoom" href="images/scoring.jpg" target="_blank" rel="noopener"><img src="images/scoring.jpg" alt="計分畫面，發球球員名字旁有紅點標示" loading="lazy"></a></div>
     <div class="ftext">
       <h2>新手不怕站錯邊</h2>
       <p>「現在該誰發、要從哪一邊發？」紅點直接標出發球的人，以及他該在左發球區還是右發球區。雙打發球方得分時，兩人的站位會自動對調，照著螢幕站就不會錯。</p>
@@ -112,7 +107,7 @@
   </div>
 
   <div class="feature flip">
-    <div class="fshot"><img src="images/watch.jpg" alt="手錶上的計分畫面" loading="lazy"></div>
+    <div class="fshot"><a class="zoom" href="images/watch.jpg" target="_blank" rel="noopener"><img src="images/watch.jpg" alt="手錶上的計分畫面" loading="lazy"></a></div>
     <div class="ftext">
       <h2>戴著手錶就能計分</h2>
       <p>Garmin 手錶用實體按鍵，下鍵我方、上鍵對方，不用看螢幕、不用解鎖，戴著手套也按得到。Apple Watch 則是觸控加分。</p>
@@ -120,7 +115,7 @@
   </div>
 
   <div class="feature">
-    <div class="fshot board"><img src="images/board.jpg" alt="iPad 當作場邊計分板顯示比分" loading="lazy"></div>
+    <div class="fshot"><a class="zoom" href="images/board.jpg" target="_blank" rel="noopener"><img src="images/board.jpg" alt="iPad 當作場邊計分板顯示比分" loading="lazy"></a></div>
     <div class="ftext">
       <h2>多一台裝置就是場邊計分板</h2>
       <p>計分板掃一下手機上的 QR 就配對完成，架在場邊即時顯示比分、局數和發球方。另一台 iPhone 或 iPad 都可以，不需要連在同一個區域網路。</p>
@@ -128,7 +123,7 @@
   </div>
 
   <div class="feature flip">
-    <div class="fshot top"><img src="images/setup.jpg" alt="開賽設定畫面" loading="lazy"></div>
+    <div class="fshot"><a class="zoom" href="images/setup.jpg" target="_blank" rel="noopener"><img src="images/setup.jpg" alt="開賽設定畫面" loading="lazy"></a></div>
     <div class="ftext">
       <h2>規則幫你管好</h2>
       <p>21／15／11 分制、單局決勝或三戰兩勝，開賽前選好就不用再管。換發球、換邊、局數、賽末點與 Deuce 全部自動處理，按錯了隨時還原上一步。</p>
