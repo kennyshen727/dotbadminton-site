@@ -65,6 +65,10 @@
       .feature .fshot { max-width: 320px; margin: 0 auto; }
     }
 
+    .promo { margin-top: 44px; }
+    .promo video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 8px; }
+    .promo .credit { display: block; font-size: 0.76rem; opacity: 0.8; margin-top: 2px; }
+
     .links { display: grid; gap: 10px; margin-top: 44px; }
     .links a {
       display: flex;
@@ -97,6 +101,18 @@
 </header>
 
 <main class="gutter">
+
+  <figure class="promo wide">
+    <video controls playsinline preload="none" poster="images/promo-poster.jpg"
+           aria-label="DotBadminton 使用情境影片：手錶自己計分、場邊的人用手機計分，場邊計分板同步顯示比分與發球">
+      <source src="videos/dotbadminton-promo.mp4" type="video/mp4">
+      你的瀏覽器無法播放影片，可以<a href="videos/dotbadminton-promo.mp4">直接下載</a>觀看。
+    </video>
+    <figcaption>
+      71 秒看懂怎麼用：手錶自己按、場邊的人用手機按，場邊計分板都會同步。
+      <span class="credit">配樂：<a href="https://onsound.eu/" target="_blank" rel="noopener">Sport Racing Car | DRIVE by Alex-Productions</a>・Music promoted by <a href="https://www.chosic.com/free-music/all/" target="_blank" rel="noopener">chosic.com</a>・<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></span>
+    </figcaption>
+  </figure>
 
   <div class="feature">
     <div class="fshot"><a class="zoom" href="images/scoring.jpg" target="_blank" rel="noopener"><img src="images/scoring.jpg" alt="計分畫面，發球球員名字旁有紅點標示" loading="lazy"></a></div>
