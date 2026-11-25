@@ -541,18 +541,19 @@ main:focus {
   justify-content: center;
   gap: 24px;
 }
-.cta-actions .qr-block {
-  align-items: center;
-  text-align: center;
-}
 .dl-option {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 16px;
 }
-.cta-actions .dl-option {
+.dl-option .qr-block {
   align-items: center;
+  text-align: center;
+}
+/* 圖文段落裡的下載區塊靠左，但內部仍對齊按鈕中線 */
+.benefit-copy .dl-option {
+  justify-self: start;
 }
 .qr {
   display: grid;
